@@ -1,0 +1,87 @@
+######################
+# Build Artifacts
+######################
+bin/
+obj/
+out/
+*.exe
+*.dll
+*.pdb
+*.app
+
+######################
+# Logs and crash dumps
+######################
+logs/
+*.log
+*.dmp
+
+######################
+# User-Specific Files
+######################
+*.user
+*.vspscc
+*.vssscc
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+######################
+# IDE and Tooling
+######################
+.vscode/
+.idea/
+*.code-workspace
+*.ncrunchproject
+_ReSharper*/
+*.DotSettings.user
+.vs/
+
+######################
+# OS Generated
+######################
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+######################
+# Publish folder
+######################
+publish/
+*.Publish.xml
+
+######################
+# Test Results
+######################
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+######################
+# Nuke Build (optional)
+######################
+.nuke/
+
+######################
+# Rider / JetBrains
+######################
+.idea/
+*.sln.iml
+
+######################
+# npm / Node (if SPA)
+######################
+node_modules/
+dist/
+build/
+
+######################
+# Backup
+######################
+*.bak
+*.old
+*.tmp
+*.swp
