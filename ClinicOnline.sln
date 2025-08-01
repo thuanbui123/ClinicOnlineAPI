@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicOnline.Core", "Clinic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicOnline.Infrastructure", "ClinicOnline.Infrastructure\ClinicOnline.Infrastructure.csproj", "{DC871EB9-906E-464B-AA83-558D68C6A825}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicOnline.Infrastructure.Test", "ClinicOnline.Infrastructure.Test\ClinicOnline.Infrastructure.Test.csproj", "{0AB0823E-1A47-4143-9868-770F3C1C42B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicOnline.Core.Test", "ClinicOnline.Core.Test\ClinicOnline.Core.Test.csproj", "{8D5E5901-F4F1-4E29-B7FD-6976F479F5B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{DC871EB9-906E-464B-AA83-558D68C6A825}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC871EB9-906E-464B-AA83-558D68C6A825}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC871EB9-906E-464B-AA83-558D68C6A825}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AB0823E-1A47-4143-9868-770F3C1C42B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AB0823E-1A47-4143-9868-770F3C1C42B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AB0823E-1A47-4143-9868-770F3C1C42B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AB0823E-1A47-4143-9868-770F3C1C42B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D5E5901-F4F1-4E29-B7FD-6976F479F5B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D5E5901-F4F1-4E29-B7FD-6976F479F5B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D5E5901-F4F1-4E29-B7FD-6976F479F5B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D5E5901-F4F1-4E29-B7FD-6976F479F5B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
