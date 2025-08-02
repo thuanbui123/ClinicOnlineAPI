@@ -3,10 +3,8 @@
 /// <summary>
 /// Các dòng thuốc trong đơn
 /// </summary>
-public partial class PrescriptionItem
+public partial class PrescriptionItem : BaseEntity
 {
-    public Guid Id { get; set; }
-
     /// <summary>
     /// Gắn với đơn thuốc
     /// </summary>
@@ -23,16 +21,6 @@ public partial class PrescriptionItem
     /// Hướng dẫn dùng thuốc (uống 2 lần/ngày, sau ăn…)
     /// </summary>
     public string? Usage { get; set; }
-
-    public bool? IsDeleted { get; set; }
-
-    public DateTime? CreatedAt { get; set; }
-
-    public DateTime? UpdatedAt { get; set; }
-
-    public string? CreatedBy { get; set; }
-
-    public string? UpdateBy { get; set; }
 
     public virtual Medicine Medicine { get; set; } = null!;
 

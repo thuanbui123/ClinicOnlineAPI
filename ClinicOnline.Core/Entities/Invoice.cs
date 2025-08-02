@@ -3,10 +3,8 @@
 /// <summary>
 /// Hóa đơn
 /// </summary>
-public partial class Invoice
+public partial class Invoice : BaseEntity
 {
-    public Guid Id { get; set; }
-
     /// <summary>
     /// Liên kết lịch khám
     /// </summary>
@@ -31,16 +29,6 @@ public partial class Invoice
     /// MoMo, ZaloPay, Tiền mặt…
     /// </summary>
     public string? PaymentMethod { get; set; }
-
-    public bool? IsDeleted { get; set; }
-
-    public DateTime? CreatedAt { get; set; }
-
-    public DateTime? UpdatedAt { get; set; }
-
-    public string? CreatedBy { get; set; }
-
-    public string? UpdateBy { get; set; }
 
     public virtual Appointment Appointment { get; set; } = null!;
 

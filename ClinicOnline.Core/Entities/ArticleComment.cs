@@ -3,10 +3,8 @@
 /// <summary>
 /// bảng lưu các bình luận về bài viết
 /// </summary>
-public partial class ArticleComment
+public partial class ArticleComment : BaseEntity
 {
-    public Guid Id { get; set; }
-
     /// <summary>
     /// Bài viết nào
     /// </summary>
@@ -21,16 +19,6 @@ public partial class ArticleComment
     /// Nội dung bình luận
     /// </summary>
     public string Comment { get; set; } = null!;
-
-    public bool? IsDeleted { get; set; }
-
-    public DateTime? CreatedAt { get; set; }
-
-    public DateTime? UpdatedAt { get; set; }
-
-    public string? CreatedBy { get; set; }
-
-    public string? UpdateBy { get; set; }
 
     /// <summary>
     /// Lưu Id của bình luận gốc nếu đây là trả lời (reply)

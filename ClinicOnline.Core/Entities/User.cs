@@ -1,9 +1,7 @@
 ﻿namespace ClinicOnline.Core.Entities;
 
-public partial class User
+public partial class User : BaseEntity
 {
-    public Guid Id { get; set; }
-
     public string FullName { get; set; } = null!;
 
     public string Email { get; set; } = null!;
@@ -15,16 +13,6 @@ public partial class User
     public string Role { get; set; } = null!;
 
     public bool? Status { get; set; }
-
-    public bool? IsDeleted { get; set; }
-
-    public DateTime? CreatedAt { get; set; }
-
-    public DateTime? UpdatedAt { get; set; }
-
-    public string? CreatedBy { get; set; }
-
-    public string? UpdateBy { get; set; }
 
     public virtual ICollection<ArticleComment> ArticleComments { get; set; } = new List<ArticleComment>();
 

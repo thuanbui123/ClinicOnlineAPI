@@ -3,10 +3,8 @@
 /// <summary>
 /// Bảng lưu thông tin bác sĩ
 /// </summary>
-public partial class Doctor
+public partial class Doctor : BaseEntity
 {
-    public Guid Id { get; set; }
-
     public Guid UserId { get; set; }
 
     /// <summary>
@@ -43,16 +41,6 @@ public partial class Doctor
     /// URL file chứng chỉ, văn bằng
     /// </summary>
     public string? CertificateFile { get; set; }
-
-    public bool? IsDeleted { get; set; }
-
-    public DateTime? CreatedAt { get; set; }
-
-    public DateTime? UpdatedAt { get; set; }
-
-    public string? CreatedBy { get; set; }
-
-    public string? UpdateBy { get; set; }
 
     public virtual ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
 

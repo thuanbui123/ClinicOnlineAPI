@@ -3,10 +3,8 @@
 /// <summary>
 /// Quản lý lịch hẹn
 /// </summary>
-public partial class Appointment
+public partial class Appointment : BaseEntity
 {
-    public Guid Id { get; set; }
-
     public Guid PatientId { get; set; }
 
     public Guid DoctorId { get; set; }
@@ -22,16 +20,6 @@ public partial class Appointment
     /// (triệu chứng, yêu cầu...)
     /// </summary>
     public string? Note { get; set; }
-
-    public bool? IsDeleted { get; set; }
-
-    public DateTime? CreatedAt { get; set; }
-
-    public DateTime? UpdatedAt { get; set; }
-
-    public string? CreatedBy { get; set; }
-
-    public string? UpdateBy { get; set; }
 
     public virtual Doctor Doctor { get; set; } = null!;
 

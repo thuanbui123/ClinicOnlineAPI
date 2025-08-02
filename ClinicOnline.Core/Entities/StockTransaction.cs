@@ -3,10 +3,8 @@
 /// <summary>
 /// Lịch sử nhập/xuất thuốc
 /// </summary>
-public partial class StockTransaction
+public partial class StockTransaction : BaseEntity
 {
-    public Guid Id { get; set; }
-
     public Guid MedicineId { get; set; }
 
     /// <summary>
@@ -23,16 +21,6 @@ public partial class StockTransaction
     /// Lý do (kê đơn, hỏng, hết hạn…)
     /// </summary>
     public string? Reason { get; set; }
-
-    public bool? IsDeleted { get; set; }
-
-    public DateTime? CreatedAt { get; set; }
-
-    public DateTime? UpdatedAt { get; set; }
-
-    public string? CreatedBy { get; set; }
-
-    public string? UpdateBy { get; set; }
 
     public virtual Medicine Medicine { get; set; } = null!;
 }

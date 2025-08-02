@@ -3,10 +3,8 @@
 /// <summary>
 /// Hồ sơ bệnh nhân
 /// </summary>
-public partial class Patient
+public partial class Patient : BaseEntity
 {
-    public Guid Id { get; set; }
-
     public Guid UserId { get; set; }
 
     /// <summary>
@@ -33,16 +31,6 @@ public partial class Patient
     /// Mã bảo hiểm y tế nếu có
     /// </summary>
     public string? InsuranceNumber { get; set; }
-
-    public bool? IsDeleted { get; set; }
-
-    public DateTime? CreatedAt { get; set; }
-
-    public DateTime? UpdatedAt { get; set; }
-
-    public string? CreatedBy { get; set; }
-
-    public string? UpdateBy { get; set; }
 
     public virtual ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
 

@@ -46,6 +46,8 @@ public partial class ClinicManagementContext : DbContext
 
     public virtual DbSet<User> Users { get; set; }
 
+    public virtual DbSet<Setting> Settings { get; set; }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
         => optionsBuilder.UseNpgsql("Server=localhost;Port=5432;Database=clinic_management;Uid=postgres;Pwd=Thuan0101#;");
@@ -564,6 +566,50 @@ public partial class ClinicManagementContext : DbContext
             entity.Property(e => e.UpdatedAt)
                 .HasDefaultValueSql("CURRENT_TIMESTAMP")
                 .HasColumnType("timestamp without time zone");
+        });
+
+        modelBuilder.Entity<Setting>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("Settings_pkey");
+
+            entity.ToTable(tb => tb.HasComment("Bảng lưu các cấu hình hệ thống"));
+
+            entity.Property(e => e.Id)
+                .HasDefaultValueSql("gen_random_uuid()");
+
+            entity.Property(e => e.Type)
+                .HasComment("Loại cấu hình, ví dụ: Email = 1, SMS = 2...");
+
+            entity.Property(e => e.Keys)
+                .HasComment("Khóa cấu hình định danh, ví dụ: SMTP_PORT, ENABLE_NOTI");
+
+            entity.Property(e => e.Name)
+                .IsRequired()
+                .HasMaxLength(200)
+                .HasComment("Tên hiển thị cấu hình");
+
+            entity.Property(e => e.Value)
+                .IsRequired()
+                .HasMaxLength(1000)
+                .HasComment("Giá trị cấu hình (string)");
+
+            entity.Property(e => e.CreatedAt)
+                .HasDefaultValueSql("CURRENT_TIMESTAMP")
+                .HasColumnType("timestamp without time zone");
+
+            entity.Property(e => e.UpdatedAt)
+                .HasDefaultValueSql("CURRENT_TIMESTAMP")
+                .HasColumnType("timestamp without time zone");
+
+            entity.Property(e => e.CreatedBy)
+                .HasMaxLength(100);
+
+            entity.Property(e => e.UpdateBy)
+                .HasMaxLength(100);
+
+            entity.Property(e => e.IsDeleted)
+                .HasDefaultValue(false)
+                .HasComment("Đánh dấu đã xóa mềm hay chưa");
         });
 
         OnModelCreatingPartial(modelBuilder);

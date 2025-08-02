@@ -3,10 +3,8 @@
 /// <summary>
 /// Ghi nhận gửi thông báo
 /// </summary>
-public partial class Notification
+public partial class Notification : BaseEntity
 {
-    public Guid Id { get; set; }
-
     /// <summary>
     /// Ai nhận thông báo
     /// </summary>
@@ -26,16 +24,6 @@ public partial class Notification
     /// Thời điểm gửi
     /// </summary>
     public DateTime? SentAt { get; set; }
-
-    public bool? IsDeleted { get; set; }
-
-    public DateTime? CreatedAt { get; set; }
-
-    public DateTime? UpdatedAt { get; set; }
-
-    public string? CreatedBy { get; set; }
-
-    public string? UpdateBy { get; set; }
 
     public virtual User User { get; set; } = null!;
 }

@@ -3,10 +3,8 @@
 /// <summary>
 /// Hồ sơ khám bệnh
 /// </summary>
-public partial class MedicalRecord
+public partial class MedicalRecord : BaseEntity
 {
-    public Guid Id { get; set; }
-
     /// <summary>
     /// Gắn với cuộc hẹn tương ứng
     /// </summary>
@@ -35,16 +33,6 @@ public partial class MedicalRecord
     /// Ngày tái khám (nếu có)
     /// </summary>
     public DateOnly? FollowUpDate { get; set; }
-
-    public bool? IsDeleted { get; set; }
-
-    public DateTime? CreatedAt { get; set; }
-
-    public DateTime? UpdatedAt { get; set; }
-
-    public string? CreatedBy { get; set; }
-
-    public string? UpdateBy { get; set; }
 
     public virtual Appointment Appointment { get; set; } = null!;
 

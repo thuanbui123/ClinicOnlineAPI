@@ -7,9 +7,12 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <None Remove="Entities\i515cumu.xkg~" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<Folder Include="Consts\" />
 		<Folder Include="CustomValidations\" />
-		<Folder Include="Entities\" />
 	</ItemGroup>
 
 	<ItemGroup>

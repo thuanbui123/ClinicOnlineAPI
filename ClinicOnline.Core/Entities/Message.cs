@@ -3,10 +3,8 @@
 /// <summary>
 /// Tin nhắn giữa người dùng
 /// </summary>
-public partial class Message
+public partial class Message : BaseEntity
 {
-    public Guid Id { get; set; }
-
     /// <summary>
     /// Người gửi
     /// </summary>
@@ -31,16 +29,6 @@ public partial class Message
     /// Đã đọc hay chưa
     /// </summary>
     public bool? IsRead { get; set; }
-
-    public bool? IsDeleted { get; set; }
-
-    public DateTime? CreatedAt { get; set; }
-
-    public DateTime? UpdatedAt { get; set; }
-
-    public string? CreatedBy { get; set; }
-
-    public string? UpdateBy { get; set; }
 
     public virtual User Receiver { get; set; } = null!;
 
