@@ -1,6 +1,7 @@
 ﻿using ClinicOnline.Core.EventHandlers;
 using ClinicOnline.Core.Events;
 using ClinicOnline.Core.Interfaces;
+using ClinicOnline.Infrastructure.External;
 using ClinicOnline.Infrastructure.Interfaces;
 using ClinicOnline.Infrastructure.MessageBrokers;
 using Microsoft.Extensions.Configuration;
@@ -17,6 +18,8 @@ public static class Extensions
         services.AddSingleton<IEventConsumer, RabbitMqConsumer>();
         services.AddHostedService<EventBusBackgroundService>();
         services.AddScoped<IEventHandler<AppointmentCreatedEvent>, AppointmentCreatedHandler>();
+
+        services.AddScoped<IEmailSender, SmtpEmailSender>();
         return services;
     }
 }

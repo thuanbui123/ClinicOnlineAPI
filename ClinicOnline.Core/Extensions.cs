@@ -13,6 +13,8 @@ public static class Extensions
         services.AddScoped<IAuthService, AuthService>();
 
         services.AddScoped<AppointmentCreatedHandler>();
+
+        services.AddScoped<IEmailService, EmailService>();
         
         return services;
     }
